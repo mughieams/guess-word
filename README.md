@@ -1,5 +1,7 @@
 # Guess Word
 
+[![CircleCI](https://circleci.com/gh/mughieams/guess-word/tree/master.svg?style=svg)](https://circleci.com/gh/mughieams/guess-word/tree/master)
+
 A simple quiz game with command line basis (CLI)
 
 ## Getting Started

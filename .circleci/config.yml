@@ -35,6 +35,10 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/repo
+      - run: 
+          name: Configure Bundler
+          command: |
+            gem install bundler:2.1.4
       - run: bundle --path vendor/bundle
       - run: bundle exec rspec spec
   

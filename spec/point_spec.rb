@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require_relative '../src/Point'
+require_relative '../src/point'
 
 describe 'Point' do
   before do

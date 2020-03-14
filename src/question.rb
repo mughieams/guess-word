@@ -15,12 +15,13 @@ class Question
     @correct_answers.split('').shuffle.join
   end
 
-  def submit_answer(answer)
+  def submit_answer(point, answer)
     if answer != @correct_answers
       return "SALAH! Silakan coba lagi"
     else
       @questions -= [@correct_answers]
-      return "BENAR!"
+      point.plus(point)
+      return "BENAR! point anda : #{point.value}!"
     end
   end
 end

@@ -1,0 +1,46 @@
+defaults: &defaults
+  working_directory: ~/repo
+version: 2
+jobs:
+  bundle_dependencies:  
+    <<: *defaults
+    docker:
+      - image: circleci/ruby:2.6.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo      
+      - restore_cache:
+          keys:
+            - rubygems-v1-{{ checksum "Gemfile.lock" }}
+      - run: bundle config set path 'vendor/bundle'
+      - run: bundle install
+      - save_cache:
+          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - ~/repo/vendor/bundle
+      - persist_to_workspace:
+          root: .
+          paths: 
+            - vendor/bundle
+  
+  unit_test:
+    <<: *defaults
+    docker:
+      - image: circleci/ruby:2.6.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/repo
+      - run: bundle config set path 'vendor/bundle'
+      - run: bundle
+      - run: bundle exec rspec spec
+  
+workflows:
+  version: 2
+  test:
+    jobs:
+      - bundle_dependencies
+      - unit_test:
+          requires:
+            - bundle_dependencies

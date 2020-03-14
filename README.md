@@ -54,3 +54,7 @@ Open this project directory on terminal and execute this command below:
 ```console
 $ ./ruby main.rb
 ```
+
+## Acknowledgments
+
+* Sweet Escape who has given me the opportunity to do this coding test

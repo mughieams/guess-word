@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
-require 'rspec'
-require_relative '../src/point'
+require_relative '../lib/guess-word'
 
 describe 'Point' do
   before do
-    @point = Point.new(0)
+    @point = GuessWord::Point.new(0)
   end
 
   after do

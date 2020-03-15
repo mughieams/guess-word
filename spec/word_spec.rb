@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
-require 'rspec'
-require_relative '../src/word'
+require_relative '../lib/guess-word'
 
 describe 'Word' do
   before do
-    @answers = Word.new('data/noun_words.txt')
+    @answers = GuessWord::Word.new('data/noun_words.txt')
   end
 
   after do

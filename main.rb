@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'src/word'
-require_relative 'src/question'
-require_relative 'src/point'
+require_relative 'lib/guess-word'
 
-words = Word.new('data/noun_words.txt').words
-question_pack = Question.new(words)
-point = Point.new(0)
+words = GuessWord::Word.new('data/noun_words.txt').words
+question_pack = GuessWord::Question.new(words)
+point = GuessWord::Point.new(0)
 
 until question_pack.questions.empty?
   print "Tebak kata : #{question_pack.get_question}\n"

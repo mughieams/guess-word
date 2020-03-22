@@ -1,5 +1,7 @@
 # Guess Word
 
+[![CircleCI](https://circleci.com/gh/mughieams/guess-word/tree/master.svg?style=svg)](https://circleci.com/gh/mughieams/guess-word/tree/master)
+
 A simple quiz game with command line basis (CLI)
 
 ## Getting Started
@@ -30,7 +32,7 @@ $ bundle install --path vendor/bundle
 Open this project directory on terminal and execute this command below:
 
 ```console
-$ bundle rspec spec
+$ bundle exec rspec spec
 ```
 
 #### Verifying code style
@@ -54,3 +56,10 @@ Open this project directory on terminal and execute this command below:
 ```console
 $ ./ruby main.rb
 ```
+#### Add new words
+
+You can add new words with write the words into `noun_words.txt` file. 
+
+## Acknowledgments
+
+* Sweet Escape who has given me the opportunity to do this coding test

@@ -2,7 +2,7 @@
 
 require_relative 'lib/guess-word'
 
-words = GuessWord::Word.new('data/noun_words.txt').words
+words = GuessWord::Word.new('data/noun.txt').words
 question_pack = GuessWord::Question.new(words)
 point = GuessWord::Point.new(0)
 

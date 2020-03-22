@@ -18,11 +18,11 @@ module GuessWord
 
     def submit_answer(point, answer)
       if answer != @correct_answers
-        'SALAH! Silakan coba lagi'
+        print '  ' + Rainbow("SALAH! Silakan Coba Lagi\n").red.bright
       else
         @questions -= [@correct_answers]
         point.plus(point)
-        "BENAR! point anda : #{point.value}!"
+        print '  ' + Rainbow('BENAR! Point Anda : ').green.bright + Rainbow("#{point.value}\n").blue.bright
       end
     end
   end

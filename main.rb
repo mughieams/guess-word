@@ -7,8 +7,10 @@ question_pack = GuessWord::Question.new(words)
 point = GuessWord::Point.new(0)
 
 until question_pack.questions.empty?
-  print "Tebak kata : #{question_pack.get_question}\n"
-  print 'Jawab : '
+  print '  ' + Rainbow('Tebak Kata  : ').blue.bright + Rainbow("#{question_pack.get_question}\n").green.bright
+  # puts "Tebak kata : #{question_pack.get_question}\n"
+  print '  ' + Rainbow('Jawab       : ').blue.bright
+  # print 'Jawab : '
   answer = gets
   print "#{question_pack.submit_answer(point, answer.chomp)}\n"
 end

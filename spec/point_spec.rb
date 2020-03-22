@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../lib/guess-word'
-
 describe 'Point' do
   before do
     @point = GuessWord::Point.new(0)

@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
-require_relative '../lib/guess-word'
-
 describe 'Word' do
   before do
-    @answers = GuessWord::Word.new('data/noun_words.txt')
+    @answers = GuessWord::Word.new('data/noun.txt')
   end
 
   after do
@@ -13,7 +11,7 @@ describe 'Word' do
 
   context 'check the presence of files' do
     it 'if file exists' do
-      expect(true).to be(File.exist?('data/noun_words.txt'))
+      expect(true).to be(File.exist?('data/noun.txt'))
     end
   end
 

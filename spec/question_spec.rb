@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../lib/guess-word'
-
 describe 'Question' do
   before do
     @answer = GuessWord::Word.new('data/noun.txt').words

@@ -58,7 +58,7 @@ $ ./ruby main.rb
 ```
 #### Add new words
 
-You can add new words with write the words into `noun_words.txt` file. 
+You can add new words with write the words into `noun.txt` file in `data` directory. 
 
 ## Acknowledgments
 
